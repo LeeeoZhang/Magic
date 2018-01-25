@@ -75,7 +75,6 @@ function createCircle (x,y) {
     return p
 }
 
-
 function animation(x,y) {
     let circle = createCircle(x,y)
     let balls = []
@@ -132,7 +131,7 @@ canvas.addEventListener('click',(event)=>{
     pointer.y = event.clientY
     //清空画布
     clear.play()
-    //在鼠标位置创建大球和小球
+    //在鼠标位置创建大球和小球,执行动画
     animation(pointer.x,pointer.y)
 })
 
