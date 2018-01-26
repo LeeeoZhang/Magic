@@ -1,6 +1,6 @@
 const canvas = document.getElementById('meteor')
 const ctx = canvas.getContext('2d')
-const startNum = 30
+const startNum = 66
 const canvasSize = {
     width: document.documentElement.clientWidth,
     height: document.documentElement.clientHeight,
@@ -33,7 +33,7 @@ function setCanvasSize () {
 function randomInitCoordinate () {
     let x, y
     x = Math.floor(Math.random() * canvasSize.width)
-    y = Math.floor(Math.random() * 200)
+    y = Math.floor(Math.random() * canvasSize.height/2)
     return {
         x, y
     }
@@ -111,8 +111,6 @@ window.addEventListener('resize', () => {
         setCanvasSize()
     }, 300)
 })
-
-
 
 setCanvasSize()
 createStarts()
