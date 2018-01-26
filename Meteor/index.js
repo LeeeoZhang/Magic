@@ -73,7 +73,6 @@ class Meteor {
         //保存流星初始坐标
         this.ix = this.sx
         this.iy = this.sy
-
     }
 
     updateCoordinate () {
@@ -112,6 +111,7 @@ window.addEventListener('resize', () => {
         setCanvasSize()
     }, 300)
 })
+
 
 
 setCanvasSize()
