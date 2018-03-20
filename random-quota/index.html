@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Quote</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <style>
+        *{margin: 0;padding: 0;font-family: 'IBM Plex Mono', monospace,sans-serif;}
+        html,body{background: #000;width: 100%;height: 100%;}
+        body {display: flex;flex-direction: column;justify-content: center;align-items: center;}
+        .quote-wrapper {
+            width: 600px;
+            height: 250px;
+            background: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .quote-ct {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .quote-ct.out {
+            animation: zoomOutLeft 1s;
+        }
+        .quote-ct.in {
+            animation: zoomInRight 1s;
+        }
+        .quote-wrapper .quote {
+            font-size:30px;
+            font-weight: bold;
+            width: 90%;
+            height: 80%;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+        } 
+        .quote-wrapper .author {
+            width: 90%;
+        }
+        .get-quote{
+            width: 600px;
+            height:50px;
+            margin-top: 20px;
+            font-size: 30px;
+            letter-spacing: 5px;
+            border-radius: 10px;
+            outline: none;
+        }
+    </style>
+    <script src="../lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="../lib/animate.css">
+</head>
+<body>
+    <div class="quote-wrapper">
+        <div class="quote-ct">
+            <p class="quote">
+                One morning I shot an elephant in my pajamas. How he got in my pajamas, I don't know.
+            </p>
+            <p class="author">Animal Crackers</p>
+        </div>
+    </div>
+    <button class="get-quote">Get Quote</button>
+    <script src="./index.js"></script>
+</body>
+</html>
