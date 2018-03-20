@@ -3,15 +3,17 @@ const HEIGHT = document.documentElement.clientHeight
 
 let game, camera
 let isTouch = false
-let yDiff = 0, startY,totalDist = 0
+let yDiff = 0, startY,
+    //总移动距离
+    totalDist = 0
 
 function init () {
     game = new Phaser.Game(WIDTH, HEIGHT, Phaser.CANVAS, 'game', null, true)
-    game.state.add('state', state)
-    game.state.start('state')
+    game.state.add('viewState', viewState)
+    game.state.start('viewState')
 }
 
-let state = {
+let viewState = {
     preload () {
         game.load.image('bg', './1.jpg')
         camera = game.camera
