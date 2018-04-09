@@ -5,7 +5,7 @@ function $$(selector) {
     return document.querySelectorAll(selector)
 }
 
-let container = $('#container')
+const container = $('#container')
 
 function backgroundColorAnime(){
     anime({
@@ -16,11 +16,12 @@ function backgroundColorAnime(){
             {value:'#E26966'},
         ],
         easing: 'linear',
-        duration:5000,
+        duration: 5000,
         direction:'alternate',
         loop: true,
     })
 }
+<<<<<<< HEAD
 
 function toSuccess (){
     anime({
@@ -49,3 +50,6 @@ function popAnime(){
 toSuccess()
 //popAnime()
 // backgroundColorAnime()
+=======
+backgroundColorAnime()
+>>>>>>> 93d1f150bd91b01d2d864135f802a300a6b1a3dc
